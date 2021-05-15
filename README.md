@@ -1,7 +1,7 @@
 # Fast-Fourier-Transform-for-Blur-Detection-
 
 ### Introduction 
-The Fourier Transform is an image processing tool which is used to decompose an image into its sine and cosine components. The output of the transformation convert an incoming signal from time domain to a Fourier, or frequency domain. In the simplest terms, a fourier transform helps in breaking down an incoming signal into its building blocks. It is useful in a wide range of applications, such as image analysis, image filtering, image reconstruction and image compression. For digital images, the 2D Discrete Fourier Transform (DTF) is used to find the frequency domain. A fast algorithm called Fast Fourier Transform (FFT) is used for the calculation of DTF. 
+The Fourier Transform is an image processing tool which is used to decompose an image into its sine and cosine components. The output of the transformation convert an incoming signal from time domain to a Fourier, or frequency domain. In the simplest terms, a fourier transform breaks down an incoming signal into its building blocks. It is useful in a wide range of applications, such as image analysis, image filtering, image reconstruction and image compression. For digital images, the 2D Discrete Fourier Transform (DTF) is used to find the frequency domain. A fast algorithm called Fast Fourier Transform (FFT) is used for the calculation of DTF. 
 
 In terms of computer vision, FFT is an image processing tool that represents an image in two domains: 
 1.	Fourier (frequency) domain 
@@ -31,6 +31,8 @@ blur_detector_image.py:
   ```imagepath python blur_detector_image.py --i images --thresh 15```
   
 ### Results Analysis 
+Screenshot of images used (left) and blur results (right). 
+![image](https://user-images.githubusercontent.com/83466109/118338178-4c370600-b4ca-11eb-9a46-ba5a86aa2d65.png)
 Similar to the Laplacian method, blur detection using the Fast Fourier Transform is dependant on the pre-defined threshold, which will range depending on type of images taken. For example, the image below is has a threshold of "30.2", which is too blurry for analysis, so a threshold of "32" was set to manually set it to blurry. 
 ![image](https://user-images.githubusercontent.com/83466109/118324378-d1182480-b4b6-11eb-8774-2d52aaaa76ae.png)
 A threshold of "32" accurately represents blur in the photo above, yet the same blur threshold doesn't work for all the images, as demonstrated in the four pictures below. 
